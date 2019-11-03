@@ -1,0 +1,34 @@
+This is what worked for me as I was undergoing a Udemy course: 1. Install HomeBrew by typing this into your terminal
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Move your old /data/db folder (if you want to backup your current dbs) into a non root folder and proceed with the next step
+
+Run in Terminal 
+a) brew uninstall mongodb 
+b) If needed run brew uninstall --force mongodb 
+c) brew tap mongodb/brew 
+d) brew install mongodb-community 
+e) brew services start mongodb/brew/mongodb-community
+
+All you need now is to run mongo 
+in the Terminal and you'll see the mongo shell symbol >.
+
+
+
+
+
+https://stackoverflow.com/questions/58034955/read-only-file-system-when-attempting-mkdir-data-db-on-mac
+https://www.youtube.com/watch?v=cu9-GphZkKI
+https://stackoverflow.com/questions/57856809/installing-mongodb-with-homebrew
+https://github.com/mongodb/homebrew-brew
+
+- create /data/db on ~
+
+- close terminal
+- open 2 new terminal
+- run mongod
+- run mongo
+
+if you have error
+- doing $sudo rm /tmp/mongodb-27017.sock in /data
+- doing this sudo rm /tmp/mongodb-27017.sock in ~ 
